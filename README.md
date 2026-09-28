@@ -10,6 +10,9 @@ that brute-force the keyspace, showing live attempts and guesses/second. Weak
 passwords are cracked in front of you; strong ones are never found, and their
 crack time is *estimated* from the measured search rate.
 
+<img width="1593" height="929" alt="mergen_passwd" src="https://github.com/user-attachments/assets/4717468e-9267-4db2-a566-5e691c05b7ac" />
+
+
 ## Features
 
 - Multithreaded brute-force engine that scales to the machine's core count.
@@ -90,22 +93,3 @@ duration being measured.
 
 Requires a working GlistEngine setup (this project lives under
 `glist/myglistapps/`).
-
-**Windows (CMake + Clang, as configured in `CMakeLists.txt`):**
-
-```sh
-cmake -S . -B _build/Release -G "Unix Makefiles"
-cmake --build _build/Release --target GlistApp
-```
-
-Run the produced `GlistApp.exe` **from the project root** (assets are resolved
-relative to the working directory), or launch it from Eclipse / the GlistEngine
-IDE workflow.
-
-**macOS (Xcode):** from `_macos/`, run `sh generate_glistapp_xcode.sh macos`, open
-the generated project, select the `GlistApp` scheme and run.
-
-## Code style
-
-English-only code and comments. Lowercase variable names, `camelCase` functions,
-`func(args)` / `if(cond) {` spacing, tabs for indentation.
